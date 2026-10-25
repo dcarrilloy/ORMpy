@@ -1,7 +1,9 @@
 # modelos.py
 from sqlalchemy import Float, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
+
 from conftest import Base
+
 
 class ProductoModel(Base):
     __tablename__ = "productos"

@@ -3,6 +3,7 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
+
 # Clase base declarativa para los modelos ORM
 class Base(DeclarativeBase):
     pass
@@ -13,7 +14,6 @@ def db_session():
     engine = create_engine("sqlite:///:memory:", echo=False)
 
     # Importar modelos para registrar metadatos antes de crear tablas
-    from modelos import ProductoModel
     Base.metadata.create_all(bind=engine)
 
     # Crear sesion de trabajo
